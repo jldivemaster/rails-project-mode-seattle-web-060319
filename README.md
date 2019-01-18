@@ -11,7 +11,7 @@ Some example project ideas from previous classes:
 1. [ROBYStuff - Rent or Buy Your Stuff](https://stark-falls-90133.herokuapp.com/listings)
 1. [Planning Ahead - Plan Your Funeral](https://ancient-mesa-18771.herokuapp.com/users/summary)
 1. [JOBuddy - Assistance with Job Applications](https://sheltered-woodland-79144.herokuapp.com/)
-1. [Remixer - An App To Make Beats] (https://remixer-v2.firebaseapp.com/) 
+1. [Remixer - An App To Make Beats](https://remixer-v2.firebaseapp.com/) 
 
 
 ## Requirements:
