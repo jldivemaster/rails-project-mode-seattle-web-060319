@@ -1,0 +1,9 @@
+<h1>Organizations#index</h1>
+
+<ul>
+<% @organizations.each do |org| %>
+<li>
+<%= link_to org.name, organization_path(org) %>
+</li>
+<% end %>
+</ul>
