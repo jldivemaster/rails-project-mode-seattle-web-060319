@@ -4,5 +4,6 @@
 <%= @project.price %><br>
 <%= @project.start_date %><br>
 <%= @project.category.name %><br>
-<%= link_to @project.organization.name, @project.organization %><br>
+<%= link_to @project.organization.name, organization_path(@project.organization) %><br>
+
 <%= @project.available_spots %><br>
