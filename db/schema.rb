@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_172959) do
+ActiveRecord::Schema.define(version: 2019_07_10_164423) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 2019_07_09_172959) do
     t.integer "age"
     t.string "bio"
     t.string "skills"
+    t.string "username"
+    t.string "password"
   end
 
 end
