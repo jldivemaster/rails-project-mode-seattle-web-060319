@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_172959) do
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
+    t.text "description"
     t.float "price"
     t.date "start_date"
     t.integer "location_id"
