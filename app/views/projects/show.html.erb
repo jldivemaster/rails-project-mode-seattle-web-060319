@@ -1,8 +1,9 @@
 <h1>Projects#show</h1>
 <%= @project.name %><br>
-<%= @project.location %><br>
+<%= @project.location.name %><br>
 <%= @project.price %><br>
 <%= @project.start_date %><br>
-<%= @project.category %><br>
-<%= @project.organization %><br>
+<%= @project.category.name %><br>
+<%= link_to @project.organization.name, organization_path(@project.organization) %><br>
+
 <%= @project.available_spots %><br>

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :projects, :organizations, :locations, :categories, only: [:index, :show]
   resources :users, :user_trips
 
+  root to: 'projects#home'
+
 end
