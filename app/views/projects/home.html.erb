@@ -1,50 +1,11 @@
-<%= stylesheet_link_tag "application.css", "home.css"%>
-
-<div id="topbarmenu">VolunTravel<br>
-See the world.<br>
-Do good.</div>
 
 
-<!-- This section is for setting login, logout functions.  Can be moved, but ignore otherwise -->
-<div class="homecontent">
+ 
+<h2>See all projects:</h2>
+<%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
 
-  <div id="whoweare">
-    <h4>Welcome to VolunTravel.</h4> 
-    We specialize in pairing individual travelers looking to see the world through volunteer work with organizations in need of volunteers.<br>
-  </div>
+<p>Prompt to search by:
+<br>
+or
+<br>
 
-  <div id="welcome"><h3>Hi, <%= session[:name] %>.</h3>
-  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
-    <input type=submit value='logout'>XXX
-  <% end %>
-  </div>
-  <!-- End login/out section -->
-
-
-
-  <div id="allprojects"><h4>See all projects:</h4>
-  <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
-    <p>Prompt to search by:
-    <br>
-    or
-    <br>
-  </div>
-
-  <div id="createprofile">
-    <h3>Create a profile:</h3>
-    <%= link_to "Create", new_user_path %><br>
-    <br>
-    <h3>Sign In: </h3>
-    <%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %><br>
-    <%= f.label :password %>
-    <%= f.text_field :password %>
-    <%= f.submit "Sign In" %>XXX
-    <% end %>
-  </div>
-</div>
-
-<div class="bottombar">
-Travel. Explore. Learn. Do good.
-</div>

@@ -15,11 +15,22 @@ Do good.</div>
   <%= f.submit %>XXX
   <% end %>
 
-  <div class="returnhome">
-  <%= render '/layouts/home_link' %>
-  </div>
-</div>
 
-<div class="bottombar">
-Travel. Explore. Learn. Do good.
-</div>
+<br>
+<br>
+<%= render '/layouts/home_link' %>
+<br>
+<br>
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit "create" %>
+<% end %>
+
