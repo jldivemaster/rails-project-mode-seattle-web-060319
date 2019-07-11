@@ -1,24 +1,20 @@
-<div class="topbar">VolunTravel | 
-See the world.
-Do good.</div>
+
 <div class="content">
-  <h1><%= @project.name %></h1>
+  <div class="maincontent">
+    <h1><%= @project.name %></h1>
     <div class="list">
       <ul>
       Location: <%= @project.location.name %><br><br>
-      Price: $<%= @project.price %>0 (per week)<br><br>
+      Price: $<%= @project.price %>0<br><br>
       Project Start Date: <%= @project.start_date %><br><br>
       Project Category: <%= @project.category.name %><br><br>
       Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %><br><br>
       Number of Available Volunteer Positions: <%= @project.available_spots %>
     </div>
-
-
-  <div class="returnhome">
-  <%= render '/layouts/home_link' %>
   </div>
+
+  <img src="<%=asset_path(@project.img_url)%>">
+  
+  
 </div>
 
-<div class="bottombar">
-Travel. Explore. Learn. Do good.
-</div>

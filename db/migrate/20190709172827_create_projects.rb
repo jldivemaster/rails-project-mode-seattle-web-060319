@@ -9,6 +9,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.integer :category_id
       t.integer :organization_id
       t.integer :available_spots
+      t.string :img_url
     end
   end
 end
