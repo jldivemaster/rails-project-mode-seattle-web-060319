@@ -1,7 +1,7 @@
 class UserTripsController < ApplicationController
 
   before_action: set_trip, only [:edit, :update, :show, :destroy]
-  #before_action :require_login
+  before_action :authorize
 
   def new
     @user_trip = UserTrip.new
