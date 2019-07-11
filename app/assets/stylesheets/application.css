@@ -27,13 +27,14 @@
   background: #4C6E52;
   font-size: 40px;
   padding-left: 20px;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-variant: small-caps;
  }
 
 .topbar {
   background: #4C6E52;
   font-size: 20px;
-  font-weight: bold;
+  font-variant: small-caps;
 }
 
 .bottombar {
