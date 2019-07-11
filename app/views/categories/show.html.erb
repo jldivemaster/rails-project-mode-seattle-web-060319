@@ -1,26 +1,43 @@
-<h1>Category Details</h1>
-<%= @category.name %><br><br><br>
+<div class="topbar">VolunTravel | 
+See the world.
+Do good.</div>
 
-<%= @category.description %><br>
-<br>
-<label>View All Projects in this Category:</label>
-<ul>
-<% @category.projects.uniq.each do |project| %>
-<li>
-<%= link_to project.name, project_path(project) %>
-</li>
-<% end %>
-</ul>
-<br>
-<label>or select by Location:</label>
-<ul>
-<% @category.locations.uniq.each do |location| %>
-<li>
-<%= link_to location.name, location_path(location) %>
-</li>
-<% end %>
-</ul>
+<div class="content">
+  <h1><%= @category.name %></h1>
+  <br>
+  <%= @category.description %><br>
+  <br>
 
-<br>
-<br>
-<%= render '/layouts/home_link' %>
+  <div class="list">
+    <h3>View Projects in this Category:</h3>
+    <ul>
+    <% @category.projects.uniq.each do |project| %>
+    <li>
+    <%= link_to project.name, project_path(project) %>
+    </li>
+    <% end %>
+    </ul>
+  </div>
+
+  <div class="list">
+    <h3>Or Select by Location:</h3>
+    <ul>
+    <% @category.locations.uniq.each do |location| %>
+    <li>
+    <%= link_to location.name, location_path(location) %>
+    </li>
+    <% end %>
+    </ul>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="returnhome">
+  <%= render '/layouts/home_link' %>
+  </div>
+</div>
+
+<div class="bottombar">
+Travel. Explore. Learn. Do good.
+</div>

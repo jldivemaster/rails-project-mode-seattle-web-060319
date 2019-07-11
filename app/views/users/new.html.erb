@@ -1,15 +1,20 @@
-<h1>Users#new</h1>
-<%= form_for @user do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :age %>
-<%= f.text_field :age %>
-<%= f.label :bio %>
-<%= f.text_area :bio %>
-<%= f.label :skills %>
-<%= f.text_field :skills %>
-<%= f.submit %>XXX
-<% end %>
+<div class="topbar">VolunTravel | 
+See the world.
+Do good.</div>
+<div class="content">
+  <h2>Create Account</h2>
+  <%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br><br>
+  <%= f.label :age %>
+  <%= f.text_field :age %><br><br>
+  <%= f.label :bio %>
+  <%= f.text_area :bio %><br><br>
+  <%= f.label :skills %>
+  <%= f.text_field :skills %><br><br>
+  <%= f.submit %>XXX
+  <% end %>
+
 
 <br>
 <br>
@@ -28,3 +33,4 @@
 
   <%= f.submit "create" %>
 <% end %>
+
