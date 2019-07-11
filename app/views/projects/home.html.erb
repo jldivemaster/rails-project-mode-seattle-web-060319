@@ -1,11 +1,21 @@
+<div class="homecontent">
+  <div id="whoweare">
+  <span style ="font-weight:bold">Welcome to VolunTravel.</span> Our goal is a simple one: <br>
+  Pair individual travelers with a drive to make the world a better place with organizations in need of volunteers.<br><br>
+  We hope you'll join us.
+  </div>
+  
+  <div id="imagehere">
+    <img src="<%=asset_path("mexico_beach1.jpg")%>">
+  </div>
 
+  <div id="allprojects"><h3>See all projects: </h3>
+  <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %></div>
 
- 
-<h2>See all projects:</h2>
-<%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
-
-<p>Prompt to search by:
-<br>
-or
-<br>
-
+  <div id="searchprojects">
+    <h3>Prompt to search by:</h3>
+   
+    <h3>or</h3>
+  
+  </div>
+</div>
