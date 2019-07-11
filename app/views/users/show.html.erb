@@ -1,10 +1,21 @@
-<h1>Users#show</h1>
-<%= @user.name %><br>
-<%= @user.age %><br>
-<%= @user.bio %><br>
-<%= @user.skills %><br>
+<div class="topbar">VolunTravel | 
+See the world.
+Do good.</div>
+<div class="content">
+  <h2><%= @user.name %></h2>
+  <div class="list">
+    <ul>
+    Current Age: <%= @user.age %><br><br>
+    Bio: <%= @user.bio %><br><br>
+    Skills: <%= @user.skills %><br>
+    </ul>
+  </div>
 
+  <div class="returnhome">
+  <%= render '/layouts/home_link' %>
+  </div>
+</div>
 
-<br>
-<br>
-<%= render '/layouts/home_link' %>
+<div class="bottombar">
+Travel. Explore. Learn. Do good.
+</div>

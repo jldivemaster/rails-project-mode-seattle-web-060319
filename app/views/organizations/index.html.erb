@@ -1,13 +1,28 @@
-<h1>Organizations</h1>
+<div class="topbar">VolunTravel | 
+See the world.
+Do good.</div>
 
-<ul>
-<% @organizations.each do |org| %>
-<li>
-<%= link_to org.name, organization_path(org) %>
-</li>
-<% end %>
-</ul>
+<div class="content">
+  <h1>Partner Organizations</h1>
 
-<br>
-<br>
-<%= render '/layouts/home_link' %>
+  <div class="list">
+    <ul>
+    <% @organizations.each do |org| %>
+    <li>
+    <%= link_to org.name, organization_path(org) %>
+    </li><br>
+    <% end %>
+    </ul>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="returnhome">
+    <%= render '/layouts/home_link' %>
+  </div>
+</div>
+
+<div class="bottombar">
+Travel. Explore. Learn. Do good.
+</div>
