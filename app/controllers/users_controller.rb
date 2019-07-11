@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show, :destroy]
+  #before_action :require_login, except: [:new, :create]
 
   def new
     @user = User.new
@@ -20,9 +21,7 @@ class UsersController < ApplicationController
   def show
   end
 
-  def index
-    @users = User.all
-  end
+
 
   def destroy
   end
@@ -36,5 +35,9 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+
+  # def require_login
+  #   return head(:forbidden) unless session.include? :user_id
+  # end
 
 end

@@ -1,3 +1,36 @@
 <h1>Organizations#show</h1>
-<%= @organization.name %>
-<%= link_to "Website", %>
+<%= @organization.name %><br>
+<%= link_to "View Our Website", @organization.website, target: '_blank' %>
+<br>
+<br>
+<label>All our projects:</label>
+<ul>
+<% @organization.projects.each do |project| %>
+<li>
+<%= link_to project.name, project_path(project) %>
+</li>
+<% end %>
+</ul>
+<br>
+<label>Our locations:</label>
+<ul>
+<% @organization.locations.uniq.each do |location| %>
+<li>
+<%= link_to location.name, location_path(location) %>
+</li>
+<% end %>
+</ul>
+<br>
+<label>Project Categories:</label>
+<ul>
+<% @organization.categories.uniq.each do |cat| %>
+<li>
+<%= link_to cat.name, category_path(cat) %>
+</li>
+<% end %>
+</ul>
+
+
+<br>
+<br>
+<%= render '/layouts/home_link' %>

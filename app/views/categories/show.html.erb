@@ -1,3 +1,26 @@
 <h1>Category Details</h1>
-<%= @category.name %><br>
+<%= @category.name %><br><br><br>
+
 <%= @category.description %><br>
+<br>
+<label>View All Projects in this Category:</label>
+<ul>
+<% @category.projects.uniq.each do |project| %>
+<li>
+<%= link_to project.name, project_path(project) %>
+</li>
+<% end %>
+</ul>
+<br>
+<label>or select by Location:</label>
+<ul>
+<% @category.locations.uniq.each do |location| %>
+<li>
+<%= link_to location.name, location_path(location) %>
+</li>
+<% end %>
+</ul>
+
+<br>
+<br>
+<%= render '/layouts/home_link' %>
