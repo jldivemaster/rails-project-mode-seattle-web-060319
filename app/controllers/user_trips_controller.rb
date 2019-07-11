@@ -1,6 +1,7 @@
 class UserTripsController < ApplicationController
 
   before_action: set_trip, only [:edit, :update, :show, :destroy]
+  #before_action :require_login
 
   def new
     @user_trip = UserTrip.new
@@ -37,5 +38,9 @@ class UserTripsController < ApplicationController
   def set_trip
     @user_trip = UserTrip.find(params[:id])
   end
-  
+
+  # def require_login
+  #   return head(:forbidden) unless session.include? :user_id
+  # end
+
 end

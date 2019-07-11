@@ -1,3 +1,16 @@
-<h1>Locations</h1>
+<h1>Locations#show</h1>
 <%= @location.name %><br>
 <%= @location.description %><br>
+<br>
+<label>Projects in this location:</label>
+<ul>
+<% @location.projects.each do |project| %>
+<li>
+<%= link_to project.name, project_path(project) %>
+</li>
+<% end %>
+</ul>
+
+<br>
+<br>
+<%= render '/layouts/home_link' %>

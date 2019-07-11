@@ -1,5 +1,17 @@
 <h1>HOME PAGE!!</h1>
 
+
+<!-- This section is for setting login, logout functions.  Can be moved, but ignore otherwise -->
+
+<h1>Hi, <%= session[:name] %>.</h1>
+<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+  <input type=submit value='logout'>XXX
+<% end %>
+
+<!-- End login/out section -->
+
+
+
 <h2>See all projects:</h2>
 <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
 
