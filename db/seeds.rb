@@ -5,9 +5,9 @@ locations = Location.create([{name: "Caribbean", description: "Belize is bordere
 {name: "Europe", description: "Morocco has Atlantic and Mediterranean coastlines, a rugged mountain interior and a history of independence not shared by its neighbours. Its rich culture is a blend of Arab, Berber, European and African influences. Morocco was a French protectorate from 1912 to 1956, when Sultan Mohammed became king."},
 {name: "Africa", description: "Uganda is a landlocked country in East Africa whose diverse landscape encompasses the snow-capped Rwenzori Mountains and immense Lake Victoria. Its abundant wildlife includes chimpanzees as well as rare birds. Remote Bwindi Impenetrable National Park is a renowned mountain gorilla sanctuary. Murchison Falls National Park in the northwest is known for its 43m-tall waterfall and wildlife such as hippos."}])
 
-users = User.create([{name: "Jill Smith", age: 23, bio: "I love to travel and see the world. When I'm not blogging and taking photos of my travels, I'm reliving them on social media.", skills: "photography, teaching English", username: "js1", password: "user1" },
-{name: "John Doe", age: 54, bio: "Recently retired from the medical field and looking forward to seeing more of the world. I speak English, German, and Spanish.", skills: "Speak multiple languages, medical skills", username: "jd1" , password: "user2" },
-{name: "Hildie Fitzgerald", age: 48, bio: "Elementary school math teacher and world traveller. Just looking for a new way to make a difference.", skills: "Experienced teacher, certified diver, fast learner.", username: "hf1" , password: "user3" }])
+users = User.create([{name: "Jill Smith", age: 23, bio: "I love to travel and see the world. When I'm not blogging and taking photos of my travels, I'm reliving them on social media.", skills: "photography, teaching English"},
+{name: "John Doe", age: 54, bio: "Recently retired from the medical field and looking forward to seeing more of the world. I speak English, German, and Spanish.", skills: "Speak multiple languages, medical skills"},
+{name: "Hildie Fitzgerald", age: 48, bio: "Elementary school math teacher and world traveller. Just looking for a new way to make a difference.", skills: "Experienced teacher, certified diver, fast learner."}])
 
 organizations = Organization.create([{name: "Go Abroad", website: "https://www.goabroad.com/volunteer-abroad"},
   {name: "International Volunteer HQ", website: "https://www.volunteerhq.org/volunteer-abroad-programs/"},
