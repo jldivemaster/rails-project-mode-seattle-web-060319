@@ -18,6 +18,7 @@
   grid-column: 2/6;
   grid-row: 2;
   text-align: left;
+  padding-top: 20px;
 }
 
 #browsecategory {
@@ -47,4 +48,5 @@
   padding-bottom: 60px;
   text-align: left;
   padding-left: 20px;
+  padding-right: 20px;
 }

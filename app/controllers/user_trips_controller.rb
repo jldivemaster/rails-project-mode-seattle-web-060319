@@ -14,8 +14,7 @@ class UserTripsController < ApplicationController
 
     @user_trip = UserTrip.create(:user_id => current_user.id, :project_id => flash[:project_id], :review => "")
     @project = @user_trip.project
-    #flash[:less] = @project.less_one_spot
-    flash[:proj_id] = @project.id
+    @project.less_one_spot
     flash[:notice] = "Congratulations! You have registered for this project!"
     redirect_to project_path(@project)
   end

@@ -16,13 +16,18 @@
 
   <div class="dashboard">
     <div id="dash">
-      Recent Trip Reviews:
-      <% @user_trips.each do |trip| %>
-         <li><% if trip.review? %>
-          <%= trip.project.name %>
-          "<%= trip.review %>"
-        </li>
-      <% end %>
+      <h3>Recent Trip Reviews</h3>
+      <div class="list">
+        <ul>
+        <% @user_trips.sample(4).each do |trip| %>
+          <li><% if trip.review? %>
+              <h5><%= trip.project.name %></h5>
+              "<%= trip.review %>"
+            <% end %>
+          </li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
