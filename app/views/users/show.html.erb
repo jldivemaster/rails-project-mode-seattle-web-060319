@@ -1,19 +1,17 @@
 
-<div class="content">
+<%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path %>
+
   <h1>Hi there, <%= current_user.username %></h1>.
-  <h2><%= @user.name %></h2>
+
   <div class="list">
     <ul>
-    Current Age: <%= @user.age %><br><br>
-    Bio: <%= @user.bio %><br><br>
-    Skills: <%= @user.skills %><br>
+      Name: <%= current_user.name %><br><br>
+    Current Age: <%= current_user.age %><br><br>
+    Bio: <%= current_user.bio %><br><br>
+    Skills: <%= current_user.skills %><br>
     </ul>
-  </div>
 
-  <h2>Browse projects:</h2>
+
+  <h2>Browse all projects:</h2>
   <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
   <br><br>
-  
-
-
-
