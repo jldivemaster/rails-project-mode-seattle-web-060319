@@ -1,6 +1,6 @@
 class UserTripsController < ApplicationController
 
-  before_action :set_trip, only: [:edit, :update, :show, :destroy]
+  before_action :set_trip, only: [:show, :destroy]
   before_action :authorize
   skip_before_action :verify_authenticity_token
 
@@ -21,12 +21,17 @@ class UserTripsController < ApplicationController
   end
 
   def edit
+    flash.keep
+    @user_trip = UserTrip.find_by(:id => flash[:trip_id])
+    #byebug
   end
 
   def update
-    @user_trip = UserTrip.update(trip_params)
+    @user_trip = UserTrip.find_by(:id => flash[:trip_id])
+    @user_trip.update(trip_params)
+
     flash[:notice] = "Thank you for leaving a review."
-    redirect_to users_path(current_user)
+    redirect_to user_path(current_user)
   end
 
   def show

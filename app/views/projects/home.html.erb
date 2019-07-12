@@ -14,5 +14,13 @@
   <div id="browselocation"><h2>Or By Location: </h2>
   <%= link_to '<button type="button">Go</button>'.html_safe, locations_path %></div>
 
+Recent Trip Reviews:
+  <% @user_trips.each do |trip| %>
+  <li><% if trip.review? %>
+  <%= trip.project.name %>
+  "<%= trip.review %>"
 
+</li>
+  <% end %>
+  <% end %>
 </div>
