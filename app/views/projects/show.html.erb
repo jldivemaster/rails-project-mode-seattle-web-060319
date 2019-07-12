@@ -11,7 +11,9 @@
       Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %><br><br>
       Number of Available Volunteer Positions: <%= @project.available_spots %>
     </div>
-
-  <img src="<%=asset_path(@project.img_url)%>">
-  
+  </div>
+  <div class="imagebox">
+    <img src="<%=asset_path(@project.img_url)%>">
+  </div>
+</div>
   

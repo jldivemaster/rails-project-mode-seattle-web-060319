@@ -1,20 +1,15 @@
-
-
 <div class="content">
-  <h1>Partner Organizations</h1>
+  <div class="maincontent">
+    <h1>Partner Organizations</h1>
 
-  <div class="list">
-    <ul>
-    <% @organizations.each do |org| %>
-    <li>
-    <%= link_to org.name, organization_path(org) %>
-    </li><br>
-    <% end %>
-    </ul>
+    <div class="list">
+      <ul>
+      <% @organizations.each do |org| %>
+      <li>
+      <%= link_to org.name, organization_path(org) %>
+      </li><br>
+      <% end %>
+      </ul>
+    </div>
   </div>
-
-  <br>
-  <br>
-
-
-
+</div>

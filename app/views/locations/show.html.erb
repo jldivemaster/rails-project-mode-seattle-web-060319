@@ -1,20 +1,20 @@
-
-
 <div class="content">
-  <h1><%= @location.name %></h1>
-  <%= @location.description %>
-  <br>
+  <div class="maincontent">
+    <h1><%= @location.name %></h1>
+    <%= @location.description %>
+    <br>
 
-  <div class="list">
-    <h3>Projects at this Location:</h3>
-    <ul>
-    <% @location.projects.each do |project| %>
-    <li>
-    <%= link_to project.name, project_path(project) %>
-    </li>
-    <% end %>
-    </ul>
+    <div class="list">
+      <h3>Projects at this Location:</h3>
+      <ul>
+      <% @location.projects.each do |project| %>
+      <li>
+      <%= link_to project.name, project_path(project) %>
+      </li>
+      <% end %>
+      </ul>
+    </div>
   </div>
-
+</div>
 
 
