@@ -1,48 +1,49 @@
-
 <div class="content">
-  <h1><%= @organization.name %></h1>
+  <div class="maincontent">
+    <h1><%= @organization.name %></h1>
 
-  <br>
-
-  <div class="list">
-    <h3>Project Categories:</h3>
-    <ul>
-    <% @organization.categories.uniq.each do |cat| %>
-    <li>
-    <%= link_to cat.name, category_path(cat) %>
-    </li>
-    <% end %>
-    </ul>
     <br>
-  </div>
-  <div class="list">
-    <h3>Our Projects:</h3>
-    <ul>
-    <% @organization.projects.each do |project| %>
-    <li>
-    <%= link_to project.name, project_path(project) %>
-    </li>
-    <% end %>
-    </ul>
-    <br>
-  </div>
-  <div class="list">
-    <h3>Our Locations:</h3>
-    <ul>
-    <% @organization.locations.uniq.each do |location| %>
-    <li>
-    <%= link_to location.name, location_path(location) %>
-    </li>
-    <% end %>
-    </ul>
-    <br>
-  </div>
 
-  <div class="visitsite">
-  <br>
-  <br>
-  <p>For more information, please
-  <%= link_to "visit our website", @organization.website, target: '_blank' %>.</p>
-  </div>
+    <div class="list">
+      <h3>Project Categories:</h3>
+      <ul>
+      <% @organization.categories.uniq.each do |cat| %>
+      <li>
+      <%= link_to cat.name, category_path(cat) %>
+      </li>
+      <% end %>
+      </ul>
+      <br>
+    </div>
+    <div class="list">
+      <h3>Our Projects:</h3>
+      <ul>
+      <% @organization.projects.each do |project| %>
+      <li>
+      <%= link_to project.name, project_path(project) %>
+      </li>
+      <% end %>
+      </ul>
+      <br>
+    </div>
+    <div class="list">
+      <h3>Our Locations:</h3>
+      <ul>
+      <% @organization.locations.uniq.each do |location| %>
+      <li>
+      <%= link_to location.name, location_path(location) %>
+      </li>
+      <% end %>
+      </ul>
+      <br>
+    </div>
 
+    <div class="visitsite">
+    <br>
+    <br>
+    <p>For more information, please
+    <%= link_to "visit our website", @organization.website, target: '_blank' %>.</p>
+    </div>
+  </div>
+</div>
 

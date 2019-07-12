@@ -1,5 +1,8 @@
 
-<%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path %>
+
+<div class="content">
+  <div class="maincontent-user">
+    <%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path %>
 
   <h1>Hi there, <%= current_user.username %></h1>.
 
@@ -10,8 +13,15 @@
     Bio: <%= current_user.bio %><br><br>
     Skills: <%= current_user.skills %><br>
     </ul>
+    </div>
+  </div>
+  <div class="sidebar">
+    <h1>Browse all projects:</h1>
+    <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
+  </div>
+
+</div>
+  
 
 
-  <h2>Browse all projects:</h2>
-  <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
-  <br><br>
+
