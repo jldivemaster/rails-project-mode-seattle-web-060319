@@ -2,16 +2,17 @@
   <div id="whoweare">
   <h2>Welcome to VolunTravel.</h2> Our goal is simple. <br><br>
   We believe that travel is better when you build meaningful relationships. We connect individual travelers with organizations in need of volunteers. Through those connections, we build community.<br><br>
-  We hope you'll join us.
+  We hope you'll join us and our partner organizations.
   </div>
 
   <div id="allprojects"><h2>See all current projects to start your journey. </h2>
   <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %></div>
 
-  <%# <div id="searchprojects">
-    <h3>Prompt to search by:</h3>
-   
-    <h3>or</h3>
-  
-  </div> %>
+  <div id="browsecategory"><h2>Browse By Category: </h2>
+  <%= link_to '<button type="button">Go</button>'.html_safe, categories_path %></div>
+
+  <div id="browselocation"><h2>Or By Location: </h2>
+  <%= link_to '<button type="button">Go</button>'.html_safe, locations_path %></div>
+
+
 </div>

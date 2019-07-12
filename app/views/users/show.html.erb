@@ -2,26 +2,31 @@
 
 <div class="content">
   <div class="maincontent-user">
-    <%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path %>
+    <%= link_to '<button type="button">Edit Profile</button>'.html_safe, edit_user_path %>
 
   <h1>Hi there, <%= current_user.username %></h1>.
 
   <div class="list">
     <ul>
-      Name: <%= current_user.name %><br><br>
-    Current Age: <%= current_user.age %><br><br>
+    Name: <%= current_user.name %><br><br>
+    Age: <%= current_user.age %><br><br>
     Bio: <%= current_user.bio %><br><br>
     Skills: <%= current_user.skills %><br>
     </ul>
     </div>
+    <h2>My Trips:</h2>
+    <% current_user.user_trips.each do |trip| %>
+    <li>
+    <%= link_to trip.project.name, project_path(trip.project) %>
+    </li>
+    <% end %>
   </div>
+
+
+
   <div class="sidebar">
     <h1>Browse all projects:</h1>
     <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
   </div>
 
 </div>
-  
-
-
-

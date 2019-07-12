@@ -6,7 +6,7 @@ class Scraper
   attr_accessor :parse_page
   def initialize(url)
     doc = HTTParty.get(url)
-    @parse_page ||= Nokogiri::HTML(doc) 
+    @parse_page ||= Nokogiri::HTML(doc)
   end
 
   def get_project_data
@@ -30,6 +30,3 @@ uganda = Scraper.new("https://www.volunteerhq.org/volunteer-in-uganda/")
 belize = Scraper.new("https://www.volunteerhq.org/volunteer-in-belize/")
 cambodia = Scraper.new("https://www.volunteerhq.org/volunteer-in-cambodia/")
 morocco = Scraper.new("https://www.volunteerhq.org/volunteer-in-morocco/")
-
-
-

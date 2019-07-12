@@ -7,5 +7,8 @@ class Project < ActiveRecord::Base
   belongs_to :location
   belongs_to :category
 
+  def less_one_spot
+    self.available_spots -= 1
+  end
 
 end
