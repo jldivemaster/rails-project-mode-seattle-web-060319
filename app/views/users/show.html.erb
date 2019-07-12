@@ -15,12 +15,14 @@
     </ul>
     </div>
     <h2>My Trips:</h2>
-    <% current_user.user_trips.each do |trip| %>
+    <% current_user.user_trips.each_with_index do |trip, i| %>
     <li>
       <%= link_to trip.project.name, project_path(trip.project) %>
       <% if trip.review == "" %>
-        <% flash[:trip_id] = trip.id %>
-        <%= (link_to '<button type="button">Leave Review</button>'.html_safe, edit_user_trip_path) %>
+
+        <%= (link_to '<button type="button">Leave Review</button>'.html_safe, edit_user_trip_path(trip, flash[:trip_id] = trip.id)) %>
+      <% else %>
+        You left a review for this trip.
       <% end %>
     </li>
     <% end %>

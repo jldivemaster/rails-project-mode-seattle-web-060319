@@ -9,6 +9,7 @@ class Project < ActiveRecord::Base
 
   def less_one_spot
     self.available_spots -= 1
+    self.save
   end
 
 
