@@ -11,4 +11,5 @@ class Project < ActiveRecord::Base
     self.available_spots -= 1
   end
 
+
 end

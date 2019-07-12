@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
 
   def home
     @user = User.new
+    @user_trips = UserTrip.all
   end
 
   def show
