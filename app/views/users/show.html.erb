@@ -21,13 +21,15 @@
       <br>
     <h2>My Trips:</h2>
     <div class="list">
-      <% current_user.user_trips.each do |trip| %>
-        <ul>
-          <li>
-          <%= link_to trip.project.name, project_path(trip.project) %>
-          </li>
-        </ul>
+    <% current_user.user_trips.each do |trip| %>
+    <li>
+      <%= link_to trip.project.name, project_path(trip.project) %>
+      <% if trip.review == "" %>
+        <% flash[:trip_id] = trip.id %>
+        <%= (link_to "Leave Review".html_safe, edit_user_trip_path, class: "button") %>
       <% end %>
+    </li>
+    <% end %>
     </div>
   </div>
 

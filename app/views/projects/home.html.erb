@@ -16,9 +16,13 @@
 
   <div class="dashboard">
     <div id="dash">
-    <h4>Coming Soon!</h4>
-    Most popular trip! <br>
-    Most recent review! <br>
+      Recent Trip Reviews:
+      <% @user_trips.each do |trip| %>
+         <li><% if trip.review? %>
+          <%= trip.project.name %>
+          "<%= trip.review %>"
+        </li>
+      <% end %>
     </div>
   </div>
 </div>
