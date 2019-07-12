@@ -1,10 +1,15 @@
-<h1>Leave a Review For Your Trip!</h1>
+<div class="content">
+  <div class="maincontent">
+    <h1>Leave a Review For Your Trip!</h1>
 
-<br>
-<br>
+    <br>
+    <br>
 
-<%= form_for @user_trip do |f| %>
-<%= f.label :review %>
-<%= f.text_area :review %>
-<%= f.submit %>
-<% end %>
+    <%= form_for @user_trip do |f| %>
+    <%= f.label :review %>
+    <%= f.text_area :review %><br><br>
+    <%= f.submit "Edit", class: "button" %>
+    <% end %>
+
+  </div>
+</div>

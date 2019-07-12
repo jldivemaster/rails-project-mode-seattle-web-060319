@@ -1,26 +1,33 @@
 <div class="homecontent">
   <div id="whoweare">
-  <h2>Welcome to VolunTravel.</h2> Our goal is simple. <br><br>
+  <h2>Welcome to VolunTravel</h2> Our goal is simple. <br><br>
   We believe that travel is better when you build meaningful relationships. We connect individual travelers with organizations in need of volunteers. Through those connections, we build community.<br><br>
   We hope you'll join us and our partner organizations.
   </div>
 
   <div id="allprojects"><h2>See all current projects to start your journey. </h2>
-  <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %></div>
+  <%= link_to "Go".html_safe, projects_path, class: "button" %></div>
 
-  <div id="browsecategory"><h2>Browse By Category: </h2>
-  <%= link_to '<button type="button">Go</button>'.html_safe, categories_path %></div>
+  <div id="browsecategory"><h2>Browse Project Categories </h2>
+  <%= link_to "Go".html_safe, categories_path, class: "button" %></div>
 
-  <div id="browselocation"><h2>Or By Location: </h2>
-  <%= link_to '<button type="button">Go</button>'.html_safe, locations_path %></div>
+  <div id="browselocation"><h2>Browse Project Locations </h2>
+  <%= link_to "Go".html_safe, locations_path, class: "button" %></div>
 
-Recent Trip Reviews:
-  <% @user_trips.each do |trip| %>
-  <li><% if trip.review? %>
-  <%= trip.project.name %>
-  "<%= trip.review %>"
-
-</li>
-  <% end %>
-  <% end %>
+  <div class="dashboard">
+    <div id="dash">
+      <h3>Recent Trip Reviews</h3>
+      <div class="list">
+        <ul>
+        <% @user_trips.sample(4).each do |trip| %>
+          <li><% if trip.review? %>
+              <h5><%= trip.project.name %></h5>
+              "<%= trip.review %>"
+            <% end %>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

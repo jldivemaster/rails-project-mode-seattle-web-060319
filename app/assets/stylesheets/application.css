@@ -67,7 +67,7 @@
 }
 
 .maincontent {
-  grid-column: 2/6;
+  grid-column: 2/7;
   grid-row: 1/2;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .imagebox {
-  grid-column: 7/12;
+  grid-column: 8/12;
   grid-row: 1/2;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -101,6 +101,27 @@
   border: 5px solid #4C6E52;
 }
 
+.button {
+  background-color: #2D3659;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* .button_to {
+  background-color: #2D3659;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+} */
 
 
 

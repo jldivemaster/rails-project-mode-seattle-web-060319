@@ -2,9 +2,8 @@
 
 <div class="content">
   <div class="maincontent-user">
-    <%= link_to '<button type="button">Edit Profile</button>'.html_safe, edit_user_path %>
 
-  <h1>Hi there, <%= current_user.username %></h1>.
+  <h1>Hi there, <%= current_user.username %></h1>
 
   <div class="list">
     <ul>
@@ -14,23 +13,31 @@
     Skills: <%= current_user.skills %><br>
     </ul>
     </div>
+    <br>
+      <%= link_to"Edit Profile".html_safe, edit_user_path, class: "button" %>
+      <br>
+      <br>
+      <br>
+      <br>
     <h2>My Trips:</h2>
-    <% current_user.user_trips.each do |trip| %>
-    <li>
-      <%= link_to trip.project.name, project_path(trip.project) %>
-      <% if trip.review == "" %>
-        <% flash[:trip_id] = trip.id %>
-        <%= (link_to '<button type="button">Leave Review</button>'.html_safe, edit_user_trip_path) %>
+    <div class="list">
+    <ul>
+      <% current_user.user_trips.each do |trip| %>
+        <li>
+          <%= link_to trip.project.name, project_path(trip.project) %>
+          <% if trip.review == "" %>
+            <% flash[:trip_id] = trip.id %>
+            <%= (link_to "Leave Review".html_safe, edit_user_trip_path, class: "button") %><br>
+          <% end %>
+        </li><br>
       <% end %>
-    </li>
-    <% end %>
+    </ul>
+    </div>
   </div>
-
-
 
   <div class="sidebar">
     <h1>Browse all projects:</h1>
-    <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
+    <%= link_to "Go".html_safe, projects_path, class: "button"  %>
   </div>
 
 </div>
