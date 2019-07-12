@@ -2,18 +2,16 @@
 
 <div class="content">
   <div class="maincontent-user">
-    <%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path %>
-
-  <h1>Hi there, <%= current_user.username %></h1>.
-
+  <h1>Hi there, <%= current_user.username %></h1>
   <div class="list">
     <ul>
-      Name: <%= current_user.name %><br><br>
+    Name: <%= current_user.name %><br><br>
     Current Age: <%= current_user.age %><br><br>
     Bio: <%= current_user.bio %><br><br>
     Skills: <%= current_user.skills %><br>
     </ul>
     </div>
+  <%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path %>
   </div>
   <div class="sidebar">
     <h1>Browse all projects:</h1>
