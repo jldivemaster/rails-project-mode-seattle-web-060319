@@ -1,6 +1,10 @@
-<h1>UserTrips#edit</h1>
-<p>Find me in app/views/user_trips/edit.html.erb</p>
+<h1>Leave a Review For Your Trip!</h1>
 
 <br>
 <br>
-<%= render '/layouts/home_link' %>
+
+<%= form_for @user_trip do |f| %>
+<%= f.label :review %>
+<%= f.text_area :review %>
+<%= f.submit %>
+<% end %>

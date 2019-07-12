@@ -9,11 +9,11 @@
       Project Start Date: <%= @project.start_date %><br><br>
       Project Category: <%= @project.category.name %><br><br>
       Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %><br><br>
-      Number of Available Volunteer Positions: <%= @project.available_spots %>
+      Number of Available Volunteer Positions: <%= @project.available_spots %><br><br>
+      <h3>Reserve your spot today!</h3>  <%= link_to '<button type="button">Register</button>'.html_safe, new_user_trip_path %>
     </div>
   </div>
   <div class="imagebox">
     <img src="<%=asset_path(@project.img_url)%>">
   </div>
 </div>
-  

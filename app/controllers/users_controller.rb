@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user.username.downcase!
 
     if @user.save
-      flash[:notice] = "Account created successfully!  Click Edit to set up your profile below."
+      flash[:notice] = "Account created successfully!  Click Edit Profile below to set up your profile details."
       session[:user_id] = @user.id.to_s
       redirect_to @user
 
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.update(user_params)
-    redirect_to @user 
+    redirect_to user_path(current_user)
   end
 
   def show
