@@ -101,6 +101,17 @@
   border: 5px solid #4C6E52;
 }
 
+.button {
+  background-color: #2D3659;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
 
 
 

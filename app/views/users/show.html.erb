@@ -11,11 +11,11 @@
     Skills: <%= current_user.skills %><br>
     </ul>
     </div>
-  <%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path %>
+  <%= link_to "Edit".html_safe, edit_user_path, class: "button"  %>
   </div>
   <div class="sidebar">
     <h1>Browse all projects:</h1>
-    <%= link_to '<button type="button">Go</button>'.html_safe, projects_path %>
+    <%= link_to "Go".html_safe, projects_path, class: "button"  %>
   </div>
 
 </div>
