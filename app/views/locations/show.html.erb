@@ -1,11 +1,11 @@
 <div class="content">
   <div class="maincontent">
-    <h1><%= @location.name %></h1>
+    <h1 class="header"><%= @location.name %></h1>
     <%= @location.description %>
     <br>
 
     <div class="list">
-      <h3>Projects at this Location:</h3>
+      <h3 class="sub-header">Projects at this Location:</h3>
       <ul>
       <% @location.projects.each do |project| %>
       <li>
@@ -16,5 +16,3 @@
     </div>
   </div>
 </div>
-
-

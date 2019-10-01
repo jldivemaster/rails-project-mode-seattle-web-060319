@@ -1,14 +1,21 @@
 <div class="content">
   <div class="maincontent">
-    <h1>Log In:</h1>
-    <%= form_for :login do |f| %>
-      <%= f.label :username %>
-      <%= f.text_field :username %><br><br>
+    <h2>Log In</h2>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-      <br><br>
-      <%= f.submit "Log In", class: "button" %>
-    <% end %>
+    <div class="row"
+      <div class="col-md-3">
+        <%= form_for :login, class: 'form-horizontal' do |f| %>
+          <div class="form-group">
+            <%= f.text_field :username, placeholder: "Username", autofocus: true, class: 'form-control' %><br><br>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password, placeholder: "Password", autocomplete: "off", class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.submit "Log In", class: 'button' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,18 +1,6 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+// @import 'bourbon';
 
 
  html, body {
@@ -26,33 +14,33 @@
  }
 
  #topbarmenu {
-  background: #4C6E52;
+  background: #FFFFF0;
   font-size: 40px;
   padding-left: 20px;
   font-variant: small-caps;
  }
-
+/* #4C6E52 */
 .topbar {
-  background: #4C6E52;
+  background: #78a17d;
   padding-top: 10px;
-  padding-left: 20px;
-  font-size: 20px;
+  padding-left: 30px;
+  font-size: 25px;
   font-variant: small-caps;
 }
 
 .navbar {
   text-align: right;
-  padding-bottom: 10px;
-  padding-right: 20px;
-  font-size: 15px;
+  /* padding-bottom: 10px; */
+  padding-right: 40px;
+  font-size: 17px;
 }
 .bottombar {
-  background: #4C6E52;
+  background: #78a17d;
   grid-column: 1/13;
   grid-row: 3;
-  font-size: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  font-size: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: center;
   font-style: italic;
 }
@@ -104,12 +92,21 @@
 .button {
   background-color: #2D3659;
   border: none;
+  width: 50%;
   color: white;
   text-align: center;
-  text-decoration: none;
+  // text-decoration: none;
   padding: 6px 14px;
   border-radius: 12px;
   font-size: 12px;
+}
+
+.header{
+  text-decoration: underline;
+}
+
+.sub-header{
+  font-style: italic;
 }
 
 /* .button_to {
@@ -122,7 +119,3 @@
   border-radius: 12px;
   font-size: 16px;
 } */
-
-
-
-
