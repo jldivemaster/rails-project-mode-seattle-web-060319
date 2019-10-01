@@ -2,13 +2,13 @@
 
 <div class="content">
   <div class="maincontent">
-    <h1><%= @category.name %></h1>
+    <h1 class="header"><%= @category.name %></h1>
     <br>
     <%= @category.description %><br>
     <br>
 
     <div class="list">
-      <h3>View Projects in this Category:</h3>
+      <h3 class="sub-header">View Projects in this Category</h3>
       <ul>
       <% @category.projects.uniq.each do |project| %>
       <li>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="list">
-      <h3>Or Select by Location:</h3>
+      <h3 class="sub-header">Or Select by Location</h3>
       <ul>
       <% @category.locations.uniq.each do |location| %>
       <li>
@@ -30,5 +30,3 @@
     </div>
   </div>
 </div>
-
-

@@ -1,30 +1,35 @@
 <div class="homecontent">
   <div id="whoweare">
-  <h2>Welcome to VolunTravel</h2> Our goal is simple. <br><br>
+  <h2 class="header">Welcome to VolunTravel</h2> Our goal is simple. <br><br>
   We believe that travel is better when you build meaningful relationships. We connect individual travelers with organizations in need of volunteers. Through those connections, we build community.<br><br>
   We hope you'll join us and our partner organizations.
   </div>
 
-  <div id="allprojects"><h2>See all current projects to start your journey. </h2>
+  <div id="allprojects"><h2 class="sub-header">See all current projects to start your journey. </h2>
   <%= link_to "Go".html_safe, projects_path, class: "button" %></div>
 
-  <div id="browsecategory"><h2>Browse Project Categories </h2>
+  <div id="browsecategory"><h2 class="sub-header">Browse Project Categories </h2>
   <%= link_to "Go".html_safe, categories_path, class: "button" %></div>
 
-  <div id="browselocation"><h2>Browse Project Locations </h2>
+  <div id="browselocation"><h2 class="sub-header">Browse Project Locations </h2>
   <%= link_to "Go".html_safe, locations_path, class: "button" %></div>
 
   <div class="dashboard">
     <div id="dash">
-      <h3>Recent Trip Reviews</h3>
+      <h3 class="sub-header">Recent Trip Reviews</h3>
       <div class="list">
         <ul>
         <% @user_trips.sample(4).each do |trip| %>
-          <li><% if trip.review? %>
-              <h5><%= trip.project.name %></h5>
-              "<%= trip.review %>"
-            <% end %>
-          </li>
+          <% if trip.review? %>
+              <h4><%= trip.project.name %></h4>
+                <blockquote class="blockquote">
+				          <p class="mb-0">"<%= trip.review %>"</p>
+                  <footer class="blockquote-footer text-right">
+					           <cite><%= (@users.find{ |user| user.id == trip.user_id }).name %></cite>
+				          </footer>
+                </blockquote>
+              <% end %>
+        
         <% end %>
         </ul>
       </div>

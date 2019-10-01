@@ -17,7 +17,8 @@
 #allprojects {
   grid-column: 2/6;
   grid-row: 2;
-  text-align: left;
+  text-align: center;
+  align-items: center;
   padding-top: 20px;
 }
 

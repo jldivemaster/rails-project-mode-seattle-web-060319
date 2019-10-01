@@ -3,23 +3,23 @@
 <div class="content">
   <div class="maincontent-user">
 
-  <h1>Hi there, <%= current_user.username %></h1>
+  <h1 class="header">Profile Page for <%= current_user.username %></h1>
 
-  <div class="list">
+  <div class="list-group">
     <ul>
-    Name: <%= current_user.name %><br><br>
-    Age: <%= current_user.age %><br><br>
-    Bio: <%= current_user.bio %><br><br>
-    Skills: <%= current_user.skills %><br>
+      <h3>Name: <%= "&nbsp;#{current_user.name}".html_safe %></h3>
+      <h3>Age: <%= "&nbsp;#{current_user.age}".html_safe %></h3>
+      <h3>Bio: <%= "&nbsp;#{current_user.bio}".html_safe %></h3>
+      <h3>Skills: <%= "&nbsp;#{current_user.skills}".html_safe %></h3>
     </ul>
-    </div>
+  </div>
+  <br>
+    <%= link_to"Edit Profile".html_safe, edit_user_path, class: "button" %>
     <br>
-      <%= link_to"Edit Profile".html_safe, edit_user_path, class: "button" %>
-      <br>
-      <br>
-      <br>
-      <br>
-    <h2>My Trips:</h2>
+    <br>
+    <br>
+    <br>
+    <h2 class="sub-header">My Trips</h2>
 
 
     <div class="list">
@@ -39,7 +39,7 @@
   </div>
 
   <div class="sidebar">
-    <h1>Browse all projects:</h1>
+    <h1 class="sub-header">Browse all projects</h1>
     <%= link_to "Go".html_safe, projects_path, class: "button"  %>
   </div>
 
