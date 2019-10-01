@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :description
       t.float :price
-      t.date :start_date
+      t.string :start_date
       t.integer :location_id
       t.integer :category_id
       t.integer :organization_id
