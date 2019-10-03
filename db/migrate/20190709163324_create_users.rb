@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.integer :age
       t.string :bio
       t.string :skills
+      t.string :avatar
     end
   end
 end

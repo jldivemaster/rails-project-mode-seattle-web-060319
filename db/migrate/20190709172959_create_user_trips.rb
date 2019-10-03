@@ -4,6 +4,7 @@ class CreateUserTrips < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.integer :project_id
       t.text :review
+      t.integer :rating
     end
   end
 end

@@ -1,3 +1,5 @@
+
+
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show, :destroy]
   before_action :authorize, except: [:new, :create]
@@ -8,6 +10,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.avatar = Faker::Avatar.image
     @user.username.downcase!
 
     if @user.save
@@ -40,7 +43,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :age, :bio, :skills, :username, :password, :password_confirmation)
+    params.require(:user).permit(:name, :age, :bio, :skills, :username, :password, :password_confirmation, :avatar)
   end
 
   def set_user

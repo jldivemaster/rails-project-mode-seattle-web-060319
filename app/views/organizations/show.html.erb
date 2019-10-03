@@ -1,10 +1,12 @@
 <div class="content">
   <div class="maincontent">
-    <h1><%= @organization.name %></h1>
+    <h1 class="header"><%= @organization.name %></h1>
 
     <br>
 
-    <div class="list">
+    <div class="list sub-header">
+      <%= image_tag ( "#{@organization.img_url}") %><br><br>
+      <%= @organization.description %><br><br>
       <h3>Project Categories:</h3>
       <ul>
       <% @organization.categories.uniq.each do |cat| %>
@@ -15,7 +17,7 @@
       </ul>
       <br>
     </div>
-    <div class="list">
+    <div class="list sub-header">
       <h3>Our Projects:</h3>
       <ul>
       <% @organization.projects.each do |project| %>
@@ -26,7 +28,7 @@
       </ul>
       <br>
     </div>
-    <div class="list">
+    <div class="list sub-header">
       <h3>Our Locations:</h3>
       <ul>
       <% @organization.locations.uniq.each do |location| %>
@@ -46,4 +48,3 @@
     </div>
   </div>
 </div>
-

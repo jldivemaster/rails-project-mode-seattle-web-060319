@@ -24,10 +24,13 @@ ActiveRecord::Schema.define(version: 2019_07_09_172959) do
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.string "img_url"
   end
 
   create_table "organizations", force: :cascade do |t|
     t.string "name"
+    t.string "description"
+    t.string "img_url"
     t.string "website"
   end
 
@@ -47,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_172959) do
     t.integer "user_id"
     t.integer "project_id"
     t.text "review"
+    t.integer "rating"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,6 +60,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_172959) do
     t.integer "age"
     t.string "bio"
     t.string "skills"
+    t.string "avatar"
   end
 
 end

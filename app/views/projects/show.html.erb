@@ -1,11 +1,13 @@
 
 <div class="content">
   <div class="maincontent">
-    <h1><%= @project.name %></h1>
+    <h1 class="sub-header"><%= @project.name %></h1>
     <div class="list">
       <ul>
+      <%= @project.description %><br><br>
       Location: <%= @project.location.name %><br><br>
       Price: $<%= @project.price %>0<br><br>
+      Average Rating: <%= @project.rating %><br><br>
       Project Start Date: <%= @project.start_date %><br><br>
       Project Category: <%= @project.category.name %><br><br>
       Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %><br><br>

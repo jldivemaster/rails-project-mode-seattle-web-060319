@@ -2,9 +2,9 @@ class UserTrip < ActiveRecord::Base
   belongs_to :user
   belongs_to :project
 
-  # def less_one_spot
-  #   self.project.available_spots -= 1
-  #   self.project.save
-  # end
+  def add_rating(input)
+    self.rating  += input
+    self.save
+  end
 
 end
