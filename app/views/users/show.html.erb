@@ -3,9 +3,9 @@
 <div class="content">
   <div class="maincontent-user">
 
-  <h1 class="header">Profile Page for <%= current_user.username %></h1>
-<%= image_tag ( "#{current_user.avatar}") %>
-<%# , style='height:50vw;width:100vw;margin-bottom:20px;' %>
+  <h1 class="header"><%= image_tag("#{current_user.avatar}", size: "100x100", alt: "avatar") %> Profile Page for <%= current_user.username %></h1>
+
+
   <div class="list-group">
     <ul>
       <h3>Name: <%= "&nbsp;#{current_user.name}".html_safe %></h3>
