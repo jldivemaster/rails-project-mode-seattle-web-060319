@@ -1,5 +1,10 @@
 
   <h1 class="header">Welcome to VolunTravel</h1>
+  <div class="jumbotron">
+    <div class="panel" id="panel1"></div>
+    <div class="panel" id="panel2"></div>
+    <div class="panel" id="panel3"></div>
+  </div>
   <div class="grid">
     <div id="whoweare">
        Our goal is simple. <br><br>
@@ -32,11 +37,11 @@
 
   <div class='grid-bg'>
     <div class="btn-grid1">
-      <div id="allprojects"><h3 class="sub-header">See all current projects to start your journey. </h3>
+      <div id="allprojects"><h3 class="sub-header">See all current projects to start your journey </h3>
         <%= link_to "See All".html_safe, projects_path, class: "browse-button" %>
       </div>
     </div>
-    <h3 class="or">OR BROWSE BY</h3>
+    <h3 class="or">or browse by</h3>
     <div class="btn-grid2">
       <div id="browsecategory">
         <%= link_to "Category".html_safe, categories_path, class: "browse-button" %>

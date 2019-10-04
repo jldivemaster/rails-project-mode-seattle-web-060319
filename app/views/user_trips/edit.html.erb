@@ -1,35 +1,27 @@
 <div class="content">
   <div class="maincontent">
-    <h1 class="header">Leave Us Feedback For Your Trip!</h1>
+    <h1 class="header">Let Others Know About Your Experience!</h1>
     <br>
     <br>
     <%= form_for @user_trip, class: 'form-horizontal' do |f| %>
-      <div class="form-group">
+      <div id="review" class="form-group">
         <%= f.label "Leave a Review" %>
         <%= f.text_area :review, autofocus: true, class: 'form-control' %>
       </div>
-      <div class="form-group">
+      <div id="ratings" class="form-group">
         <%= f.label "Rate Your Trip" %>
-        <label class="container">1
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">2
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">3
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">4
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">5
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
+        <div id="rating-boxes">
+        <%= f.label "1", class: "container", id: "container1" %>
+        <%= f.radio_button :rating, "1" %>
+        <%= f.label "2", class: "container" %>
+        <%= f.radio_button :rating, "2" %>
+        <%= f.label "3", class: "container" %>
+        <%= f.radio_button :rating, "3" %>
+        <%= f.label "4", class: "container" %>
+        <%= f.radio_button :rating, "4" %>
+        <%= f.label "5", class: "container" %>
+        <%= f.radio_button :rating, "5" %>
+        </div>
       </div>
       <div class="form-group">
         <%= f.submit "Submit Review", class: "button" %>

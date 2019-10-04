@@ -31,7 +31,6 @@
 
 .navbar {
   text-align: right;
-  /* padding-bottom: 10px; */
   padding-right: 40px;
   font-size: 17px;
 }
@@ -42,13 +41,40 @@
   padding-bottom: 25px;
   text-align: center;
   font-style: italic;
+}
 
+.jumbotron{
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 230px;
+  width: 100%;
+  padding: 0 0 0 0;
+  margin-top: 30px;
+}
+
+.panel{
+  height: 230px;
+  margin-bottom: 0;
+}
+
+#panel1{
+  background-image: url("hardi-kids.jpg");
+  background-size: 100% 100%;
+}
+
+#panel2{
+  background-image: url("mexicoGVIteam.jpg");
+  background-size: 100% 100%;
+}
+
+#panel3{
+  background-image: url("lionfish.jpg");
+  background-size: 100% 100%;
 }
 
 .content {
   min-height: 100%;
-  // grid-template-columns: repeat(12, 1fr);
-  // grid-template-rows: repeat(1, 1fr);
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -61,7 +87,6 @@
   min-height: 50%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -106,17 +131,6 @@
   font-size: 12px;
 }
 
-// .button_to {
-//   background-color: #2D3659;
-//   border: none;
-//   width: 50%;
-//   color: white;
-//   text-align: center;
-//   padding: 6px 14px;
-//   border-radius: 12px;
-//   font-size: 12px;
-// }
-
 .link-button {
   background-color: #2D3659;
   border: none;
@@ -148,6 +162,7 @@
   text-align: center;
   font-style: italic;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .grid-bg{
@@ -169,6 +184,7 @@
   text-align: center;
   align-items: center;
   padding-bottom: 15px;
+  height: 60px;
 }
 
 .btn-grid2{
@@ -181,7 +197,6 @@
 
 #browsecategory {
   grid-column: 1;
-  /* padding-top: 20px; */
   text-align: center;
   padding-left: 50px;
   padding-bottom: 10px;
@@ -196,15 +211,43 @@
 
 #browseorg {
   grid-column: 2;
-  /* padding-top: 20px; */
   text-align: center;
   padding-bottom: 10px;
 }
 
 
 .form-group{
-  margin-left: 200px;
+  margin-left: 350px;
   width: 50%;
+}
+
+#review{
+  font-size: 17px;
+}
+
+#ratings{
+  font-size: 17px;
+}
+
+#rating-boxes{
+  display: flex;
+  height: 60px;
+  width: 150px;
+}
+
+.container{
+  width: 30px;
+  padding-left: 15px;
+}
+
+#container1{
+  padding-left: 5px;
+  padding-right: 2px;
+}
+
+#ratings input {
+  margin-top: 2px;
+  margin-left: 2px;
 }
 
 /* .button_to {
