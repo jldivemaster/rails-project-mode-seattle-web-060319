@@ -1,17 +1,29 @@
 
 <div class="content">
   <div class="maincontent">
-    <h2>Edit Profile:</h2>
-    <%= form_for @user do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %><br><br>
-    <%= f.label :age %>
-    <%= f.text_field :age %><br><br>
-    <%= f.label :bio %>
-    <%= f.text_area :bio %><br><br>
-    <%= f.label :skills %>
-    <%= f.text_field :skills %><br><br>
-    <%= f.submit "Edit", class: "button" %>
-    <% end %>
-  </div>
+    <h2 class="header">Edit Profile</h2>
+
+      <%= form_for @user, class: 'form-horizontal' do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name , autofocus: true, class: 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :age %>
+        <%= f.text_field :age, autofocus: true, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :bio %>
+        <%= f.text_area :bio, autofocus: true, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :skills %>
+        <%= f.text_field :skills, autofocus: true, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Edit", class: "button" %>
+      </div>
+      <% end %>
+    </div>
+
 </div>

@@ -1,38 +1,46 @@
-<div class="homecontent">
-  <div id="whoweare">
-  <h2 class="header">Welcome to VolunTravel</h2> Our goal is simple. <br><br>
-  We believe that travel is better when you build meaningful relationships. We connect individual travelers with organizations in need of volunteers. Through those connections, we build community.<br><br>
-  We hope you'll join us and our partner organizations.
-  </div>
 
-  <div id="allprojects"><h2 class="sub-header">See all current projects to start your journey. </h2>
-  <%= link_to "Go".html_safe, projects_path, class: "button" %></div>
+  <h2 class="header">Welcome to VolunTravel</h2>
+  <div class="grid">
+    <div id="whoweare">
+       Our goal is simple. <br><br>
+      We believe that travel is better when you build meaningful relationships. We connect individual travelers with organizations in need of volunteers. Through those connections, we build community.<br><br>
+      We hope you'll join us and our partner organizations.
+    </div>
 
-  <div id="browsecategory"><h2 class="sub-header">Browse Project Categories </h2>
-  <%= link_to "Go".html_safe, categories_path, class: "button" %></div>
+    <div class="dashboard">
+      <div id="dash">
+        <h3 class="sub-header">Recent Trip Reviews</h3>
+        <div class="list">
+          <ul>
+          <% @user_trips.sample(4).each do |trip| %>
+            <% if trip.review? %>
+                <h4><strong><%= trip.project.name %></strong></h4>
+                  <div>
+  				          <p class="review">"<%= trip.review %>"</p>
+                    <footer class="blockquote-footer text-right">
+  					           <cite>-- <%= (@users.find{ |user| user.id == trip.user_id }).name %></cite>
+  				          </footer>
+                  <div>
+                <% end %>
 
-  <div id="browselocation"><h2 class="sub-header">Browse Project Locations </h2>
-  <%= link_to "Go".html_safe, locations_path, class: "button" %></div>
-
-  <div class="dashboard">
-    <div id="dash">
-      <h3 class="sub-header">Recent Trip Reviews</h3>
-      <div class="list">
-        <ul>
-        <% @user_trips.sample(4).each do |trip| %>
-          <% if trip.review? %>
-              <h4><%= trip.project.name %></h4>
-                <blockquote class="blockquote">
-				          <p class="mb-0">"<%= trip.review %>"</p>
-                  <footer class="blockquote-footer text-right">
-					           <cite><%= (@users.find{ |user| user.id == trip.user_id }).name %></cite>
-				          </footer>
-                </blockquote>
-              <% end %>
-        
-        <% end %>
-        </ul>
+          <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="btn-grid1">
+    <div id="allprojects"><h2 class="sub-header">See all current projects to start your journey. </h2>
+      <%= link_to "See All".html_safe, projects_path, class: "link-button" %>
+    </div>
+  </div>
+  <h3 class="or">OR</h3>
+  <div class="btn-grid2">
+    <div id="browsecategory"><h2 class="sub-header">Browse Project Categories </h2>
+      <%= link_to "Categories".html_safe, categories_path, class: "link-button" %>
+    </div>
+    <div id="browselocation"><h2 class="sub-header">Browse Project Locations </h2>
+      <%= link_to "Locations".html_safe, locations_path, class: "link-button" %>
+    </div>
+  </div>

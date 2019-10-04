@@ -1,14 +1,14 @@
 <div class="content">
   <div class="maincontent">
-    <h1 class="header">Leave a Review For Your Trip!</h1>
+    <h1 class="header">Leave Us Feedback For Your Trip!</h1>
 
     <br>
     <br>
 
-    <%= form_for @user_trip do |f| %>
+    <%= form_for @user_trip, class: 'form-horizontal' do |f| %>
     <%= f.label :review %>
-    <%= f.text_area :review %><br><br>
-    <%= f.submit "Edit", class: "button" %>
+    <%= f.text_area :review, class: 'form-control' %><br><br>
+    <%= f.submit "Submit Review", class: "button" %>
     <% end %>
 
   </div>

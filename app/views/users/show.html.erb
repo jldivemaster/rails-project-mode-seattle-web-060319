@@ -15,7 +15,7 @@
     </ul>
   </div>
   <br>
-    <%= link_to"Edit Profile".html_safe, edit_user_path, class: "button" %>
+    <%= link_to("Edit Profile", edit_user_path, class: "link-button") %>
     <br>
     <br>
     <br>
@@ -30,7 +30,7 @@
           <%= link_to trip.project.name, project_path(trip.project) %>
           <% if trip.review == "" %>
             <% flash[:trip_id] = trip.id %>
-            <%= (link_to "Leave Review".html_safe, edit_user_trip_path, class: "button") %><br>
+            <%= link_to "Leave Review".html_safe, edit_user_trip_path, class: "button" %><br>
           <% end %>
         </li><br>
 
@@ -41,7 +41,7 @@
 
   <div class="sidebar">
     <h1 class="sub-header">Browse all projects</h1>
-    <%= link_to "Go".html_safe, projects_path, class: "button"  %>
+    <%= link_to "Go".html_safe, projects_path, class: "link-button"  %>
   </div>
 
 </div>

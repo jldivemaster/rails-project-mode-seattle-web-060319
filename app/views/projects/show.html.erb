@@ -1,7 +1,7 @@
 
 <div class="content">
+  <h1 class="sub-header"><%= @project.name %></h1>
   <div class="maincontent">
-    <h1 class="sub-header"><%= @project.name %></h1>
     <div class="list">
       <ul>
       <%= @project.description %><br><br>
@@ -12,10 +12,10 @@
       Project Category: <%= @project.category.name %><br><br>
       Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %><br><br>
       Number of Available Volunteer Positions: <%= @project.available_spots %><br><br>
-      <h3>Reserve your spot today!</h3>  <%= link_to "Register".html_safe, new_user_trip_path, class: "button" %>
+      <h3>Reserve your spot today!</h3>  <%= link_to "Register".html_safe, new_user_trip_path, class: "link-button" %>
     </div>
-  </div>
-  <div class="imagebox">
-    <img src="<%=asset_path(@project.img_url)%>">
+    <div class="imagebox">
+      <img src="<%=asset_path(@project.img_url)%>">
+    </div>
   </div>
 </div>
