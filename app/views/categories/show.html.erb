@@ -4,7 +4,9 @@
   <div class="maincontent">
     <h1 class="header"><%= @category.name %></h1>
     <br>
-    <%= image_tag ( "#{@category.img_url}") %><br><br>
+    <div class="imagebox">
+    <%= image_tag ( "#{@category.img_url}") %>
+    </div><br>
     <%= @category.description %><br>
     <br>
 

@@ -1,12 +1,11 @@
 <div class="content">
-     <div class="maincontent">
           <h1 class="header">Sign Up Today!</h1>
 
           <div class='form-horizontal'>
             <label class="sub-header">Payments Details</label>
-            <%= text_field_tag "dummy", nil, class: 'form-control' %><br><br>
+            <%= text_field_tag "dummy", nil, class: 'form-control form-group' %><br><br>
             <label class="sub-header">Additional Info</label>
-            <%= text_area_tag "dummy", nil, class: 'form-control' %><br>
+            <%= text_area_tag "dummy", nil, class: 'form-control form-group' %><br>
             <div class='form-horizontal'>
             <%= form_for @user_trip, class: 'form-horizontal' do |f| %>
             <div class="form-group">
@@ -14,5 +13,4 @@
             </div>
             <% end %>
           </div>
-     </div>
 </div>

@@ -1,12 +1,12 @@
 <div class="content">
   <div class="maincontent">
     <h1 class="header"><%= @location.name %></h1>
-    <%= image_tag ( "#{@location.img_url}") %>
+    <div class="imagebox"><%= image_tag ( "#{@location.img_url}") %></div>
     <%= @location.description %>
     <br>
 
     <div class="list">
-      <h3 class="sub-header">Projects at this Location:</h3>
+      <h3 class="sub-header">Projects In This Region</h3>
       <ul>
       <% @location.projects.each do |project| %>
       <li>

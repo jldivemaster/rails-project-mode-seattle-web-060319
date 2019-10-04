@@ -1,14 +1,39 @@
 <div class="content">
   <div class="maincontent">
     <h1 class="header">Leave Us Feedback For Your Trip!</h1>
-
     <br>
     <br>
-
     <%= form_for @user_trip, class: 'form-horizontal' do |f| %>
-    <%= f.label :review %>
-    <%= f.text_area :review, class: 'form-control' %><br><br>
-    <%= f.submit "Submit Review", class: "button" %>
+      <div class="form-group">
+        <%= f.label "Leave a Review" %>
+        <%= f.text_area :review, autofocus: true, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label "Rate Your Trip" %>
+        <label class="container">1
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">2
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">3
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">4
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">5
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Submit Review", class: "button" %>
+      </div>
     <% end %>
 
   </div>

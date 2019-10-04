@@ -1,47 +1,59 @@
 
 
 <div class="content">
-  <div class="maincontent-user">
-
   <h1 class="header"><%= image_tag("#{current_user.avatar}", size: "100x100", alt: "avatar") %> Profile Page for <%= current_user.username %></h1>
 
+  <div class="maincontent grid">
 
-  <div class="list-group">
-    <ul>
-      <h3>Name: <%= "&nbsp;#{current_user.name}".html_safe %></h3>
-      <h3>Age: <%= "&nbsp;#{current_user.age}".html_safe %></h3>
-      <h3>Bio: <%= "&nbsp;#{current_user.bio}".html_safe %></h3>
-      <h3>Skills: <%= "&nbsp;#{current_user.skills}".html_safe %></h3>
-    </ul>
+    <div class="list-group">
+      <h2 class="sub-header">Details</h2>
+      <ul>
+        <h3>Name: <%= "&nbsp;#{current_user.name}".html_safe %></h3>
+        <h3>Age: <%= "&nbsp;#{current_user.age}".html_safe %></h3>
+        <h3>Bio: <%= "&nbsp;#{current_user.bio}".html_safe %></h3>
+        <h3>Skills: <%= "&nbsp;#{current_user.skills}".html_safe %></h3>
+        <br>
+        <%= link_to("Edit Profile", edit_user_path, class: "link-button") %>
+      </ul>
+    </div>
+
+    <div class="sidebar">
+      <h2 class="sub-header">My Trips</h2>
+      <div class="list">
+      <ul>
+        <% current_user.user_trips.each do |trip| %>
+          <li>
+            <%= link_to trip.project.name, project_path(trip.project) %>
+            <% if trip.review == "" %>
+              <% flash[:trip_id] = trip.id %>
+              <%= link_to "Leave Review".html_safe, edit_user_trip_path, class: "button" %><br>
+            <% end %>
+          </li><br>
+
+        <% end %>
+      </ul>
+      </div>
+    </div>
+
   </div>
-  <br>
-    <%= link_to("Edit Profile", edit_user_path, class: "link-button") %>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2 class="sub-header">My Trips</h2>
 
-
-    <div class="list">
-    <ul>
-      <% current_user.user_trips.each do |trip| %>
-        <li>
-          <%= link_to trip.project.name, project_path(trip.project) %>
-          <% if trip.review == "" %>
-            <% flash[:trip_id] = trip.id %>
-            <%= link_to "Leave Review".html_safe, edit_user_trip_path, class: "button" %><br>
-          <% end %>
-        </li><br>
-
-      <% end %>
-    </ul>
+  <div class='grid-bg'>
+    <div class="btn-grid1">
+      <div id="allprojects"><h3 class="sub-header">See all current projects to start your journey. </h3>
+        <%= link_to "See All".html_safe, projects_path, class: "browse-button" %>
+      </div>
+    </div>
+    <h3 class="or">OR BROWSE BY</h3>
+    <div class="btn-grid2">
+      <div id="browsecategory">
+        <%= link_to "Category".html_safe, categories_path, class: "browse-button" %>
+      </div>
+      <div id="browseorg">
+        <%= link_to "Organization".html_safe, organizations_path, class: "browse-button" %>
+      </div>
+      <div id="browselocation">
+        <%= link_to "Location".html_safe, locations_path, class: "browse-button" %>
+      </div>
     </div>
   </div>
-
-  <div class="sidebar">
-    <h1 class="sub-header">Browse all projects</h1>
-    <%= link_to "Go".html_safe, projects_path, class: "link-button"  %>
-  </div>
-
 </div>

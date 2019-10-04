@@ -1,5 +1,5 @@
 
-  <h2 class="header">Welcome to VolunTravel</h2>
+  <h1 class="header">Welcome to VolunTravel</h1>
   <div class="grid">
     <div id="whoweare">
        Our goal is simple. <br><br>
@@ -8,8 +8,8 @@
     </div>
 
     <div class="dashboard">
-      <div id="dash">
-        <h3 class="sub-header">Recent Trip Reviews</h3>
+      <div class="dash">
+        <h3 class="sub-header dash-text">Recent Trip Reviews</h3>
         <div class="list">
           <ul>
           <% @user_trips.sample(4).each do |trip| %>
@@ -30,17 +30,22 @@
     </div>
   </div>
 
-  <div class="btn-grid1">
-    <div id="allprojects"><h2 class="sub-header">See all current projects to start your journey. </h2>
-      <%= link_to "See All".html_safe, projects_path, class: "link-button" %>
+  <div class='grid-bg'>
+    <div class="btn-grid1">
+      <div id="allprojects"><h3 class="sub-header">See all current projects to start your journey. </h3>
+        <%= link_to "See All".html_safe, projects_path, class: "browse-button" %>
+      </div>
     </div>
-  </div>
-  <h3 class="or">OR</h3>
-  <div class="btn-grid2">
-    <div id="browsecategory"><h2 class="sub-header">Browse Project Categories </h2>
-      <%= link_to "Categories".html_safe, categories_path, class: "link-button" %>
-    </div>
-    <div id="browselocation"><h2 class="sub-header">Browse Project Locations </h2>
-      <%= link_to "Locations".html_safe, locations_path, class: "link-button" %>
+    <h3 class="or">OR BROWSE BY</h3>
+    <div class="btn-grid2">
+      <div id="browsecategory">
+        <%= link_to "Category".html_safe, categories_path, class: "browse-button" %>
+      </div>
+      <div id="browseorg">
+        <%= link_to "Organization".html_safe, organizations_path, class: "browse-button" %>
+      </div>
+      <div id="browselocation">
+        <%= link_to "Location".html_safe, locations_path, class: "browse-button" %>
+      </div>
     </div>
   </div>

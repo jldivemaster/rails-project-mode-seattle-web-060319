@@ -1,12 +1,13 @@
 <div class="content">
-  <div class="maincontent">
-    <h1 class="header">Partner Organizations</h1>
+  <h1 class="header">Partner Organizations</h1>
 
+  <div class="maincontent grid">
     <div class="list">
       <ul>
       <% @organizations.each do |org| %>
       <li>
-      <%= link_to org.name, organization_path(org) %>
+      <h3><%= image_tag("#{org.img_url}", size: "200x100", alt: "logo") %>
+      <%= link_to org.name, organization_path(org) %></h3>
       </li><br>
       <% end %>
       </ul>
