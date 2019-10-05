@@ -1,19 +1,19 @@
 <div class="content">
-  <div class="maincontent">
     <h1 class="header"><%= @location.name %></h1>
-    <div class="imagebox"><%= image_tag ( "#{@location.img_url}") %></div>
-    <%= @location.description %>
-    <br>
+    <h5 class="desc"><%= @location.description %></h5>
 
-    <div class="list">
-      <h3 class="sub-header">Projects In This Region</h3>
-      <ul>
-      <% @location.projects.each do |project| %>
-      <li>
-      <%= link_to project.name, project_path(project) %>
-      </li>
-      <% end %>
-      </ul>
+    <div class="maincontent grid2">
+      <div class="imagebox grid-col1"><%= image_tag ( "#{@location.img_url}") %></div>
+
+      <div class="list grid-col2">
+        <h3 class="sub-header">Projects In This Region</h3>
+        <ul>
+        <% @location.projects.each do |project| %>
+        <li>
+        <%= link_to project.name, project_path(project) %>
+        </li>
+        <% end %>
+        </ul>
+      </div>
     </div>
-  </div>
 </div>

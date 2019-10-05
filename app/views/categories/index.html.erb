@@ -2,8 +2,12 @@
 <div class="content">
   <div class="maincontent">
   <h1 class="header">Volunteer Categories</h1>
+  <ul class="list">
   <%@categories.each do |category| %>
+  <li>
   <%=link_to category.name, category%><br><br>
+  </li>
   <%end%>
+  </ul>
   </div>
-</div>  
+</div>

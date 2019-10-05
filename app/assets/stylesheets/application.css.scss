@@ -19,7 +19,6 @@
   font-variant: small-caps;
  }
 
-
 .topbar {
   height: 75px;
   background: #78a17d;
@@ -34,6 +33,7 @@
   padding-right: 40px;
   font-size: 17px;
 }
+
 .bottombar {
   background: #78a17d;
   font-size: 25px;
@@ -83,7 +83,7 @@
   display: grid;
 }
 
-.grid {
+.grid2 {
   min-height: 50%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -91,15 +91,54 @@
   padding-right: 20px;
 }
 
-.list ul {
-  list-style: none;
+.grid-col1{
+  grid-column: 1;
+}
+
+.grid-col2{
+  grid-column: 2;
+}
+
+.grid-loc{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mapbox {
+  grid-column: 2;
+  width: 1000px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.mapbox img {
+  width: 100%;
+  height: auto;
+}
+
+.list{
+   padding-top: 20px;
+   padding-bottom: 40px;
+}
+
+.map-list ul {
+  height: 100%;
+  line-height: 2.5;
+  padding-top: 40px;
+  padding-left: 70px;
+}
+
+.list li {
+  font-size: 25px;
+  position: relative;
 }
 
 .sidebar {
   grid-column: 9/11;
   grid-row: 1/2;
   text-align: center;
-  padding-top: 60px;
 }
 
 .imagebox {
@@ -112,12 +151,6 @@
   width: 100%;
   height: auto;
   border: 5px solid #4C6E52;
-}
-
-.mapbox {
-  width: 800px;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .button {
@@ -163,6 +196,13 @@
   font-style: italic;
   margin-top: 10px;
   margin-bottom: 30px;
+}
+
+.desc{
+  display: flex;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .grid-bg{
@@ -221,6 +261,15 @@
   width: 50%;
 }
 
+.form1{
+  width: 15%
+}
+
+.form-btn{
+  display: flex;
+  justify-content: center;
+}
+
 #review{
   font-size: 17px;
 }
@@ -249,6 +298,20 @@
   margin-top: 2px;
   margin-left: 2px;
 }
+
+.visitsite{
+  padding-top: 20px;
+}
+
+.logo{
+  margin-left: 250px;
+}
+
+.profile{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 
 /* .button_to {
   background-color: #2D3659;

@@ -1,50 +1,50 @@
 <div class="content">
-  <div class="maincontent">
+
     <h1 class="header"><%= @organization.name %></h1>
-
-    <br>
-
-    <div class="list sub-header">
-      <%= image_tag ( "#{@organization.img_url}") %><br><br>
-      <%= @organization.description %><br><br>
-      <h3>Project Categories:</h3>
-      <ul>
-      <% @organization.categories.uniq.each do |cat| %>
-      <li>
-      <%= link_to cat.name, category_path(cat) %>
-      </li>
-      <% end %>
-      </ul>
-      <br>
-    </div>
-    <div class="list sub-header">
-      <h3>Our Projects:</h3>
-      <ul>
-      <% @organization.projects.each do |project| %>
-      <li>
-      <%= link_to project.name, project_path(project) %>
-      </li>
-      <% end %>
-      </ul>
-      <br>
-    </div>
-    <div class="list sub-header">
-      <h3>Our Locations:</h3>
-      <ul>
-      <% @organization.locations.uniq.each do |location| %>
-      <li>
-      <%= link_to location.name, location_path(location) %>
-      </li>
-      <% end %>
-      </ul>
-      <br>
+    <h5 class="desc"><%= @organization.description %></h5>
+    <div class="grid2">
+      <div class="logo">
+        <%= image_tag ( "#{@organization.img_url}") %>
+      </div>
+      <div class="visitsite">
+        <h4>For more information, please
+        <%= link_to "visit our website", @organization.website, target: '_blank' %>.</h4>
+      </div>
     </div>
 
-    <div class="visitsite">
-    <br>
-    <br>
-    <p>For more information, please
-    <%= link_to "visit our website", @organization.website, target: '_blank' %>.</p>
+    <div class="maincontent list grid3">
+        <div class="sub-header">
+          <h2>Project Categories</h2>
+          <ul>
+            <% @organization.categories.uniq.each do |cat| %>
+              <h3>
+                <%= link_to cat.name, category_path(cat) %>
+              </h3>
+            <% end %>
+          </ul>
+          <br>
+        </div>
+        <div class="sub-header">
+          <h2>Our Projects</h2>
+          <ul>
+            <% @organization.projects.each do |project| %>
+              <h3>
+                <%= link_to project.name, project_path(project) %>
+              </h3>
+            <% end %>
+          </ul>
+          <br>
+        </div>
+        <div class="sub-header">
+          <h2>Our Locations</h2>
+            <ul>
+              <% @organization.locations.uniq.each do |location| %>
+                <h3>
+                  <%= link_to location.name, location_path(location) %>
+                </h3>
+              <% end %>
+            </ul>
+          <br>
+        </div>
     </div>
-  </div>
 </div>

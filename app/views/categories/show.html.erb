@@ -1,16 +1,16 @@
 
 
 <div class="content">
-  <div class="maincontent">
-    <h1 class="header"><%= @category.name %></h1>
-    <br>
-    <div class="imagebox">
-    <%= image_tag ( "#{@category.img_url}") %>
-    </div><br>
-    <%= @category.description %><br>
-    <br>
 
-    <div class="list">
+    <h1 class="header"><%= @category.name %></h1>
+    <h5 class="desc"><%= @category.description %></h5>
+
+  <div class="maincontent grid2">
+    <div class="imagebox grid-col1">
+    <%= image_tag ( "#{@category.img_url}") %>
+    </div>
+
+    <div class="list grid-col2">
       <h3 class="sub-header">View Projects in this Category</h3>
       <ul>
       <% @category.projects.uniq.each do |project| %>
@@ -18,10 +18,7 @@
       <%= link_to project.name, project_path(project) %>
       </li>
       <% end %>
-      </ul>
-    </div>
-
-    <div class="list">
+      </ul><br><br>
       <h3 class="sub-header">Or Select by Location</h3>
       <ul>
       <% @category.locations.uniq.each do |location| %>

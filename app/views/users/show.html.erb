@@ -3,7 +3,7 @@
 <div class="content">
   <h1 class="header"><%= image_tag("#{current_user.avatar}", size: "100x100", alt: "avatar") %> Profile Page for <%= current_user.username %></h1>
 
-  <div class="maincontent grid">
+  <div class="maincontent profile">
 
     <div class="list-group">
       <h2 class="sub-header">Details</h2>
@@ -22,13 +22,13 @@
       <div class="list">
       <ul>
         <% current_user.user_trips.each do |trip| %>
-          <li>
+          <h3>
             <%= link_to trip.project.name, project_path(trip.project) %>
             <% if trip.review == "" %>
               <% flash[:trip_id] = trip.id %>
               <%= link_to "Leave Review".html_safe, edit_user_trip_path, class: "button" %><br>
             <% end %>
-          </li><br>
+          </h3>
 
         <% end %>
       </ul>

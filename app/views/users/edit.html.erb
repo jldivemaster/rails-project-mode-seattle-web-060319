@@ -3,23 +3,23 @@
     <h2 class="header">Edit Profile</h2>
 
       <%= form_for @user, class: 'form-horizontal' do |f| %>
-      <div class="form-group">
+      <div class="form-group form1">
         <%= f.label :name %>
         <%= f.text_field :name , autofocus: true, class: 'form-control'%>
       </div>
-      <div class="form-group">
+      <div class="form-group form1">
         <%= f.label :age %>
         <%= f.text_field :age, autofocus: true, class: 'form-control' %>
       </div>
-      <div class="form-group">
+      <div class="form-group form2">
         <%= f.label :bio %>
         <%= f.text_area :bio, autofocus: true, class: 'form-control' %>
       </div>
-      <div class="form-group">
+      <div class="form-group form2">
         <%= f.label :skills %>
         <%= f.text_field :skills, autofocus: true, class: 'form-control' %>
       </div>
-      <div class="form-group">
+      <div class="form-group form-btn">
         <%= f.submit "Edit", class: "button" %>
       </div>
       <% end %>
