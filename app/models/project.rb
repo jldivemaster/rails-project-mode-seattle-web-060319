@@ -15,12 +15,12 @@ class Project < ActiveRecord::Base
   def rating
     rated_trips = UserTrip.all.filter{ |t| (t.rating != nil) && (t.project_id == self.id) }
     rating_sum = (rated_trips.map{ |t| t.rating }).reduce(:+)
-    if (rating_sum == nil || rating_sum == 0 || rated_trips.length)
+    # byebug
+    if (rating_sum == nil || rating_sum == 0 || rated_trips.length == 0)
       return 0
     else
-      return (rating_sum / rated_trips.length)
+      return (rating_sum.to_f / rated_trips.length.to_f)
     end
   end
-
 
 end

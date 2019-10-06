@@ -3,9 +3,9 @@
 
           <div class='form-horizontal'>
             <label class="sub-header">Payments Details</label>
-            <%= text_field_tag "dummy", nil, class: 'form-control form-group' %><br><br>
+            <%= text_field_tag "dummy", nil, placeholder: "This is a dummy form.", class: 'form-control form-group' %><br>
             <label class="sub-header">Additional Info</label>
-            <%= text_area_tag "dummy", nil, class: 'form-control form-group' %><br>
+            <%= text_area_tag "dummy", nil, placeholder: "No information necessary.", class: 'form-control form-group' %><br>
             <div class='form-horizontal'>
             <%= form_for @user_trip, class: 'form-horizontal' do |f| %>
             <div class="form-group">

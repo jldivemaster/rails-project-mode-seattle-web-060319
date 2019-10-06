@@ -5,14 +5,18 @@
   <div class="maincontent grid2">
     <div class="list">
       <ul>
-        Region: <%= @project.location.name %><br><br>
-        Price: $<%= @project.price %>0<br><br>
-        Average Rating: <%= @project.rating %><br><br>
-        Project Start Date: <%= @project.start_date %><br><br>
-        Project Category: <%= @project.category.name %><br><br>
-        Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %><br><br>
-        Number of Available Volunteer Positions: <%= @project.available_spots %><br><br>
-        <h3>Reserve your spot today!</h3>  <%= link_to "Register".html_safe, new_user_trip_path, class: "link-button" %>
+        <h3>Region: <%= @project.location.name %></h3>
+        <h3>Price: $<%= @project.price %>0</h3>
+        <h3>Average Rating: <%= @project.rating %></h3>
+        <h3>Project Start Date: <%= @project.start_date %></h3>
+        <h3>Project Category: <%= @project.category.name %></h3>
+        <h3>Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %></h3>
+        <h4 class="num-left">Number of Available Volunteer Positions: <%= @project.available_spots %></h4>
+        <% if (current_user.projects.include?(@project)) %>
+          <h3>You are currently signed up for this project!</h3>
+        <% else %>
+          <h3>Reserve your spot today!</h3>  <%= link_to "Register".html_safe, new_user_trip_path, class: "link-button" %>
+        <% end %>
       </ul>
     </div>
     <div class="imagebox">

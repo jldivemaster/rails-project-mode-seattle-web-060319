@@ -7,7 +7,6 @@ class UserTripsController < ApplicationController
   def new
     @user_trip = UserTrip.new
     flash.keep
-    
   end
 
   def create
@@ -20,15 +19,13 @@ class UserTripsController < ApplicationController
   end
 
   def edit
-    flash.keep
-    @user_trip = UserTrip.find_by(:id => flash[:trip_id])
-    #byebug
+    @user_trip = UserTrip.find_by(:id => params[:id])
   end
 
   def update
-    @user_trip = UserTrip.find_by(:id => flash[:trip_id])
+    @user_trip = UserTrip.find_by(:id => params[:id])
     @user_trip.update(trip_params)
-
+    @user_trip.save
     flash[:notice] = "Thank you for leaving a review."
     redirect_to user_path(current_user)
   end
@@ -46,7 +43,7 @@ class UserTripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:user_trip).permit(:user_id, :project_id, :review)
+    params.require(:user_trip).permit(:user_id, :project_id, :review, :rating)
   end
 
   def set_trip

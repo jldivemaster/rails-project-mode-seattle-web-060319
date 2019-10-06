@@ -18,7 +18,6 @@
         <div class="list">
           <ul>
           <% @user_trips.sample(4).each do |trip| %>
-            <% if trip.review? %>
                 <h4><strong><%= trip.project.name %></strong></h4>
                   <div>
   				          <p class="review">"<%= trip.review %>"</p>
@@ -26,7 +25,6 @@
   					           <cite>-- <%= (@users.find{ |user| user.id == trip.user_id }).name %></cite>
   				          </footer>
                   <div>
-                <% end %>
           <% end %>
           </ul>
         </div>
