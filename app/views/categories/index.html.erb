@@ -2,12 +2,31 @@
 <div class="content">
   <div class="maincontent">
   <h1 class="header">Volunteer Categories</h1>
-  <ul class="list">
-  <%@categories.each do |category| %>
-  <li>
-  <%=link_to category.name, category%><br><br>
-  </li>
-  <%end%>
+  <ul class="list cat-list">
+    <div class="col-md-12">
+  			<div class="row">
+
+  <% @categories.each do |category| %>
+        <div class="col-md-4 outercard">
+					<div class="card">
+            <%= image_tag("#{category.img_url}", alt: "image", class: "card-img-top") %>
+						
+						<div class="card-block">
+							<h3 class="card-title">
+								<%= category.name %>
+							</h3>
+							<p class="card-text">
+                <%= category.description %>
+                </p>
+							<p class="cat-btn">
+								<%=link_to "Learn More", category, class: 'button' %>
+							</p>
+						</div>
+					</div>
+				</div>
+        <%end%>
+      </div>
+		</div>
   </ul>
   </div>
 </div>
