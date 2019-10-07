@@ -75,4 +75,20 @@ Through hands-on experience, game drives and lectures, students will have the op
 
 Interns will engage in daily morning surveys to record nesting activity and protect turtle nests against predation by mammals and inundation by sea water. Furthermore, interns will inform overseas visitors and the local community about the conservation of these turtles. All our internships are geared at developing your leadership skills, allowing you to develop a variety of soft and hard skills that will boost your marine conservation experience. In Giannitsochori we work to educate the local community and visitors as to conservation efforts being conducted around the turtle breeding. We have a group of highly experienced field staff who will work with you to develop and improve your skill and in so doing giving you a fantastic starting point for developing your conservation career. GVI aslo offers the opportunity for you to gain additional leadership qualifications and experience in a conservation environment.", price: 600, start_date: '2019-7-3', location_id: 3, category_id: 1, organization_id: 4, available_spots: 9, img_url: "gili_turtle.jpg"},
 
+{name: "Volunteer Healthcare Project in South Africa", description: "Travel to a small coastal town an hour outside central Cape Town to facilitate healthy lifestyle habits in local communities. Work alongside an international team of volunteers, interns, and staff, as well as local community members all in service to greater health.
+
+  HIGHLIGHTS
+
+Contribute to United Nations Sustainable Development Goal #3, Good Health and Well-Being, #4, Quality Education, and #5, Gender Equality.
+
+Gain experience in childhood education.
+
+Practice skills like leading and managing a class.
+
+On the weekends, in your free time, you take the cable car up to Table Mountain or the boat to Robben Island.
+
+Before or after your program you will have the opportunity to visit Kruger National Park.", price: 550, start_date: '2020-01-15', location_id: 4, category_id: 5, organization_id: 4, available_spots: 12, img_url: "s-africa-kids.jpg"},
+
 ])
+
+user_trips = UserTrip.create!([{user_id: 1, project_id: 1, review: "This was the best time of my life! What an experience!", rating: 5}, {user_id: 1, project_id: 5, review: "I made so many friends on this once-in-a-lifetime adventure!", rating: 4}, {user_id: 2, project_id: 1, review: "I can't wait to sign up for another project next year!", rating: 4}, {user_id: 2, project_id: 3, review: "It was such a great experience to meet and learn with the women of Belize.", rating: 5}, {user_id: 3, project_id: 9, review: "Gili Air is  such a wonderful community!  I will always have a home there after this trip!", rating: 5}, {user_id: 3, project_id: 13, review: "What a great opportunity! Thank you VolunTravel!", rating: 3}])
