@@ -12,7 +12,7 @@
         <h3>Project Category: <%= @project.category.name %></h3>
         <h3>Partner Organization: <%= link_to @project.organization.name, organization_path(@project.organization) %></h3>
         <h4 class="num-left">Number of Available Volunteer Positions: <%= @project.available_spots %></h4>
-        <% if (current_user.projects.include?(@project)) %>
+        <% if (current_user && current_user.projects.include?(@project)) %>
           <h3>You are currently signed up for this project!</h3>
         <% else %>
           <h3>Reserve your spot today!</h3>  <%= link_to "Register".html_safe, new_user_trip_path, class: "link-button" %>
