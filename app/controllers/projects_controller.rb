@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def home
-    @user = User.new
+    # @user = User.new
     @user_trips = UserTrip.all.filter{|t| t.review? }
     @users = User.all
   end
