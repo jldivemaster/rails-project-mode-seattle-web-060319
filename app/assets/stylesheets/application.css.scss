@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url("background.jpg");
+  background-image: image_url("background.jpg");
   background-attachment: fixed;
   color: #2D3659;
   width: 100%;
@@ -59,17 +59,17 @@
 }
 
 #panel1{
-  background-image: url("hardi-kids.jpg");
+  background-image: image_url("hardi-kids.jpg");
   background-size: 100% 100%;
 }
 
 #panel2{
-  background-image: url("mexicoGVIteam.jpg");
+  background-image: image_url("mexicoGVIteam.jpg");
   background-size: 100% 100%;
 }
 
 #panel3{
-  background-image: url("lionfish.jpg");
+  background-image: image_url("lionfish.jpg");
   background-size: 100% 100%;
 }
 
