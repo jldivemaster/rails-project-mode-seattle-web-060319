@@ -6,7 +6,7 @@
       <ul>
       <% @organizations.each do |org| %>
       <li>
-      <h3><%= image_tag("#{org.img_url}", size: "200x100", alt: "logo") %>
+      <h3><%= image_tag("#{org.img_url}", size: "200x100", alt: "#{org.img_url}") %>
       <%= link_to org.name, organization_path(org) %></h3>
       </li><br>
       <% end %>

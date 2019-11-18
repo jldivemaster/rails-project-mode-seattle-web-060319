@@ -7,6 +7,7 @@ FactoryBot.define do
     age { 25 }
     bio { "Bio String" }
     skills { "Skillset" }
+    avatar { Faker::Avatar.image }
   end
 
   factory :duplicate_user, class: "User" do
@@ -17,5 +18,6 @@ FactoryBot.define do
     age { 25 }
     bio { "Bio String" }
     skills { "Skillset" }
+    avatar { Faker::Avatar.image }
   end
 end

@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :project do
     name { "Project 1" }
+    description { "Project1 desc" }
     location
     organization
     category
@@ -9,6 +10,7 @@ FactoryBot.define do
 
   factory :second_project, class: "Project" do
     name { "Project 2" }
+    description { "Project2 desc" }
     location
     organization
     category

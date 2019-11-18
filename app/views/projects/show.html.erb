@@ -19,8 +19,8 @@
         <% end %>
       </ul>
     </div>
-    <div class="imagebox">
-      <img src="<%=asset_path(@project.img_url)%>">
+    <div class="imagebox"><%= image_tag ("#{@project.img_url}") %>
+
     </div>
   </div>
 </div>

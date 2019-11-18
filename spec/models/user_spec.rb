@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.create(:user)
   end
-  describe 'creation' do
+  context 'creation' do
     it 'can be created successfully' do
       expect(@user).to be_valid
     end

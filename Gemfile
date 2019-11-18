@@ -40,6 +40,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'warden', '~> 1.2', '>= 1.2.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 4.7'
+  gem 'rails_warden', '~> 0.6.0'
 end
 
 group :development do
